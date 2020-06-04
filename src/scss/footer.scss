@@ -1,0 +1,79 @@
+.footer {
+  background-color: $body_bg_color;
+  &.footer_main {
+    background-color: #fff;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 102px;
+    background-image: url('../img/bg/bg-footer-mob-up.svg');
+    background-size: 100% 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: -4px;
+    margin-top: 15px;
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/bg-footer-up.svg');
+        height: 132px;
+      }
+    }
+  }
+  a.footer__link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: $footer_text_color;
+    font-size: 11px;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  a.footer__link:hover {
+    color: $footer_text_color_hover;
+    text-decoration: none;
+  }
+  @media (min-width: 768px) {
+    a.footer__link {
+      font-size: 10px;
+      margin-top: 0;
+    }
+    a.footer__link + a.footer__link {
+      margin-left: 30px;
+    }
+  }
+  @media (min-width: 992px) {
+    a.footer__link {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 1200px) {
+    a.footer__link {
+      font-size: 16px;
+    }
+    a.footer__link + a.footer__link {
+      margin-left: 50px;
+    }
+  }
+}
+
+.footer__bottom {
+  background-color: $bg_dark_1;
+  padding: 10px 0 50px;
+  @media (min-width: 576px) {
+    & {
+      padding: 50px 0 65px;
+    }
+  }
+  @media (min-width: 768px) {
+    & {
+      padding: 60px 0 65px;
+    }
+  }
+  @media (min-width: 1200px) {
+    & {
+      padding: 60px 0 85px;
+    }
+  }
+}

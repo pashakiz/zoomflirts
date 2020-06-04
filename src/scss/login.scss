@@ -1,0 +1,33 @@
+.login-slider {
+  display: flex;
+  position: relative;
+  margin-top: 72px;
+  margin-bottom: 74px;
+  justify-content: space-between;
+  padding-left: 15px;
+  @media (min-width: 348px) {
+    justify-content: space-around;
+  }
+  @media (min-width: 768px) {
+    margin-top: 195px;
+  }
+  @media (min-width: 992px) {
+    margin-top: 295px;
+  }
+  @media (min-width: 1400px) {
+    margin-top: 195px;
+  }
+}
+
+.header-form-title {
+  @media (min-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 48px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 55px;
+    line-height: 80px;
+    margin-bottom: 88px;
+  }
+}

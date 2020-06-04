@@ -1,0 +1,346 @@
+.header {
+  .notice {
+    display: inline-block;
+    background-color: $btn_bg_color;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 10px;
+    line-height: 1;
+    text-align: center;
+    @media (min-width: 768px) {
+      & {
+        font-size: 15px;
+        padding: 7px 10px;
+      }
+    }
+  }
+  &.expand {
+    .header__row {
+      background-color: $bg_dark_1;
+      @media (min-width: 768px) {
+        & {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+.header_page {
+  margin-bottom: 68px;
+  @media (min-width: 768px) {
+    & {
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 992px) {
+    & {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.header__row {
+  padding: 27px 15px 0;
+  @media (min-width: 768px) {
+    & {
+      padding: 40px 40px 0 40px;
+    }
+  }
+  @media (min-width: 992px) {
+    & {
+      padding: 90px 90px 0 90px;
+    }
+  }
+}
+
+.header__nav-toggle {
+  color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
+  @media (min-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
+.header__userinfo {
+  display: none;
+  padding-left: 30px;
+  max-width: 500px;
+  @media (min-width: 768px) {
+    & {
+      display: block;
+    }
+  }
+  .notice {
+    margin-left: 22px;
+    position: relative;
+    top: -1px;
+  }
+  .header__userinfo-text,
+  a.header__userinfo-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-all;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+.header-menu {
+  display: none;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    background-image: url('../img/bg/mobile/bg-menu.svg');
+  }
+  @media (min-width: 768px) {
+    & {
+      display: none !important;
+    }
+  }
+}
+.header-menu__wrap {
+  padding-top: 30px;
+  background-color: $bg_dark_1;
+}
+.header-menu__item {
+  padding: 15px 15px 30px;
+  &:hover {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+}
+.header-menu__item-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  word-break: break-all;
+  padding-right: 30px;
+  @media (min-width: 768px) {
+    & {
+      font-size: 18px;
+    }
+  }
+}
+
+.header__firstscreen {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  &.bg01 {
+    background-position: 100%;
+  }
+  &.bg02 {
+    background-position: 100% 15%;
+  }
+  &.bg03 {
+    background-position: 100% 15%;
+  }
+  @media (min-width: 768px) {
+    & {
+      background-position: top right !important;
+      background-size: 54%;
+      position: relative;
+    }
+  }
+  &.bg01 {
+    background-image: url('../img/bg/mobile/bg-index-01.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-index-01.jpg');
+      }
+    }
+  }
+  &.bg02 {
+    background-image: url('../img/bg/mobile/bg-index-02.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-index-02.jpg');
+      }
+    }
+  }
+  &.bg03 {
+    background-image: url('../img/bg/mobile/bg-index-03.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-index-03.jpg');
+      }
+    }
+  }
+  &.bg-login-01 {
+    background-image: url('../img/bg/mobile/bg-index-01.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-size: 53%;
+        background-image: url('../img/bg/desktop/bg-login-01.jpg');
+      }
+    }
+  }
+  &.bg-login-02 {
+    background-image: url('../img/bg/mobile/bg-index-02.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-login-02.jpg');
+      }
+    }
+  }
+  &.bg-login-03 {
+    background-image: url('../img/bg/mobile/bg-index-03.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-login-03.jpg');
+      }
+    }
+  }
+  &.bg-login-04 {
+    background-image: url('../img/bg/mobile/bg-index-02.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-login-04.jpg');
+      }
+    }
+  }
+  &.bg-login-05 {
+    background-image: url('../img/bg/mobile/bg-index-03.jpg');
+    @media (min-width: 768px) {
+      & {
+        background-image: url('../img/bg/desktop/bg-login-05.jpg');
+      }
+    }
+  }
+}
+
+.header__firstscreen-wrap {
+  position: relative;
+  z-index: 10;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 180px;
+    background-image: url('../img/bg/mobile/bg-main-up.svg');
+    background-size: 100% 100%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -2px;
+    z-index: -10;
+  }
+  @media (min-width: 768px) {
+    & {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &:after {
+      content: none;
+      display: none;
+    }
+  }
+}
+
+.header__bgimg {
+  display: none;
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
+.header__titlebox {
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    width: 250px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 992px) {
+    width: 360px;
+  }
+}
+
+.header__form {
+  padding-top: 48px;
+  @media (min-width: 768px) {
+    width: 411px;
+    padding-top: 15px;
+  }
+  @media (min-width: 992px) {
+    padding-top: 30px;
+  }
+  @media (min-width: 1920px) {
+    padding-top: 131px;
+  }
+}
+
+.header__title {
+  width: 210px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-family: "ActaDisplay", sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 45px;
+  color: #fff;
+  &:before {
+    @media (min-width: 768px) {
+      & {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 1px;
+        border-top: 3px solid $logo_main_color;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    & {
+      width: auto;
+      text-align: left;
+      margin: 0 0 50px;
+    }
+  }
+  @media (min-width: 992px) {
+    & {
+      font-size: 45px;
+      line-height: 60px;
+    }
+  }
+  @media (min-width: 1200px) {
+    & {
+      font-size: 67px;
+      line-height: 85px;
+      margin: 0 0 60px;
+    }
+  }
+  @media (min-width: 1440px) {
+    & {
+      font-size: 90px;
+      line-height: 120px;
+    }
+  }
+}

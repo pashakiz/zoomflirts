@@ -67,21 +67,9 @@
 .footer__bottom {
   background-color: #fff;
   padding: 28px 0 31px;
-  @media (min-width: 576px) {
-    & {
-      padding: 50px 0 65px;
-    }
-  }
   @media (min-width: 768px) {
-    & {
-      background-color: #000;
-      padding: 52px 0 50px;
-    }
-  }
-  @media (min-width: 1200px) {
-    & {
-      padding: 52px 0 50px;
-    }
+    background-color: #000;
+    padding: 52px 0 50px;
   }
 }
 

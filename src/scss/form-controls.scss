@@ -24,52 +24,59 @@ body textarea:required:valid {
 
 }
 .form-control {
-  border: none;
+  border: $input_border;
   background-color: $input_bg;
   border-radius: $input_border_radius;
-  padding: 1.325rem 1.625rem;
+  padding: 0.9375rem 1.875rem;
   color: $input_txt_color;
   font-family: $input_txt_family;
   font-size: $checkbox_txt_xs_size;
   line-height: $checkbox_txt_xs_lh;
   font-weight: 300;
-  font-style: italic;
   &:hover {
     background-color: $input_hover_bg;
     color: $input_hover_txt_color;
+    border: $input_hover_border;
   }
   &:focus {
     box-shadow: none;
     background-color: $input_hover_bg;
     color: $input_hover_txt_color;
+    border: $input_hover_border;
   }
   &::placeholder {
     color: $input_placeholder_color;
     opacity: 1;
   }
   @media (min-width: 768px) {
-    padding: 1.1875rem 2.9375rem 1.4375rem;
-    font-size: 23px;
+    padding: 1.125rem 1.875rem 1.5rem;
+    font-size: $checkbox_txt_size;
   }
 }
 input.form-control {
-  height: 50px;
+  height: 47px;
   @media (min-width: 768px) {
-    height: 73px;
+    height: 60px;
   }
 }
 textarea.form-control {
   border-radius: $textarea_border_radius;
-  min-height: 200px;
+  min-height: 177px;
+  @media (min-width: 768px) {
+    min-height: 153px;
+  }
 }
 .form-group_20 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8125rem;
   @media (min-width: 768px) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.625rem;
   }
 }
 .form-group_30 {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
+  @media (min-width: 768px) {
+    margin-bottom: 1.875rem;
+  }
 }
 .form-group_30up {
   margin-top: 1.875rem;
@@ -90,7 +97,6 @@ textarea.form-control {
   .custom-control-label {
     font-family: $checkbox_txt_family;
     font-weight: 300;
-    font-style: italic;
     line-height: 20px;
     font-size: $checkbox_txt_xs_size;
     cursor: pointer;
@@ -170,7 +176,6 @@ textarea.form-control {
   .custom-control-label {
     font-family: $radio_txt_family;
     font-weight: 300;
-    font-style: italic;
     font-size: $radio_txt_xs_size;
     line-height: $radio_txt_xs_lh;
     cursor: pointer;
@@ -182,7 +187,7 @@ textarea.form-control {
       background-color: $radio_bg_color;
       border: $radio_border !important;
       outline: none !important;
-      border-radius: 1rem;
+      border-radius: 7px;
     }
     &::after {
       top: $radio_xs_top;
@@ -223,6 +228,13 @@ textarea.form-control {
         }
       }
     }
+    &:hover {
+      ~.custom-control-label {
+        &::before {
+          border: $radio_hover_border !important;
+        }
+      }
+    }
     &:active {
       ~.custom-control-label {
         &::before {
@@ -242,48 +254,64 @@ textarea.form-control {
 
 .custom-switch.custom-control {
   &.custom-control {
-    padding-left: 3rem;
+    padding-left: calc(3rem + #{$switch_left_offset});
     cursor: pointer;
   }
   .custom-control-label {
-    line-height: 1.8;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    line-height: 1.5;
+    font-family: $font_family;
+    font-weight: 300;
+    font-size: 22px;
+    color: #060606;
     cursor: pointer;
     &::before {
-      left: -2.875rem;
-      width: 2.375rem;
+      line-height: 1.8;
+      content: $switch_content_bg;
+      color: #CCC;
+      font-size: 16px;
+      font-weight: 500;
+      left: calc(-87px - #{$switch_distance_text});
+      width: 88px;
       pointer-events: all;
-      border-radius: 1rem;
-      background-color: #f0f1f3;
-      height: 19px;
+      border-radius: 10px;
+      background-color: #fff;
+      height: 30px;
       top: 2px;
-      border: none;
+      border: 1px solid #ccc;
+      padding: 0 10px;
+      transition: color .15s ease-in-out;
     }
     &::after {
+      line-height: 1.8;
+      content: 'Off';
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
       top: calc(.25rem - 2px);
-      left: calc(-2.875rem - 2px);
-      width: calc(1.5rem - 5px);
-      height: calc(1.5rem - 5px);
-      background-color: #90A4A0;
-      border-radius: 0.75rem;
-      transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+      left: calc(-87px - #{$switch_distance_text});
+      width: calc(3.0625rem - 5px);
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 10px;
       transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-      transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
     }
   }
   .custom-control-input {
     &:checked {
       ~.custom-control-label {
         &::before {
-          color: #fff;
-          background-color: #f0f1f3;
+          content: $switch_content_bg;
+          color: #060606;
+          background-color: #fff;
+          border: 1px solid #131313;
+          padding: 0 10px;
         }
         &::after {
-          background-color: #20A892;
-          -webkit-transform: translateX(1.375rem);
-          transform: translateX(1.375rem);
+          content: 'On';
+          background-color: #FF6699;
+          -webkit-transform: translateX(2.9rem);
+          transform: translateX(2.9rem);
         }
       }
     }
@@ -300,13 +328,20 @@ textarea.form-control {
           box-shadow: none;
         }
       }
+      &:not(:checked) {
+        ~.custom-control-label {
+          &::before {
+            border-color: #ccc;
+          }
+        }
+      }
     }
   }
 }
 
 .custom-file {
   display: block;
-  width: 150px;
+  width: 170px;
   height: auto;
   margin: 0 auto;
   .custom-file-input {
@@ -330,11 +365,10 @@ textarea.form-control {
 .btn {
   width: 100%;
   text-transform: uppercase;
-  border-radius: 0;
-  padding: 1.25rem 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
+  border-radius: 10px;
+  padding: 1.0625rem 1.3rem;
+  font-weight: 300;
+  font-size: 14px;
   color: #fff;
   background-color: $btn_bg_color;
   &:hover {
@@ -346,15 +380,25 @@ textarea.form-control {
     box-shadow: none;
   }
   @media (min-width: 768px) {
-    & {
-      width: auto;
-    }
+    width: auto;
   }
   @media (min-width: 992px) {
-    & {
-      width: auto;
-      font-size: 17px;
-      padding: 2rem 2.5rem;
+    width: auto;
+    font-size: 17px;
+    padding: 1.25rem 2.5rem;
+  }
+  &.btn_2 {}
+  &.btn_3 {
+    font-size: 14px;
+    padding: 0.4375rem 1.3rem;
+    background-color: #131313;
+    font-weight: 300;
+    color: #fff;
+    &:hover {
+      background-color: $btn_bg_color;
+    }
+    @media (min-width: 768px) {
+      padding: 0.625rem 1.3rem;
     }
   }
 }

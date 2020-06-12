@@ -7,15 +7,15 @@ $btn_hover_bg_color:        #E45182;/**/
 $font_color:                #141111;/**/
 $bg_dark_1:                 #010101;
 $font_family:               "Gilroy", sans-serif;
-$font_weight:               300;
-$font_size:                 20px;
-$font_size_mobile:          15px;
+$font_weight:               300;/**/
+$font_size:                 20px;/**/
+$font_size_mobile:          15px;/**/
 $body_mb:                   150px;
 $body_mb_mob:               80px;
-$font_family2:              $font_family;
-$link_txt_family:           $font_family;
-$link_color:                $btn_bg_color;
-$link_hover_color:          #B44D4D;
+$font_family2:              $font_family;/**/
+$link_txt_family:           $font_family;/**/
+$link_color:                #060606;/**/
+$link_hover_color:          $btn_bg_color;/**/
 $link2_color:               #514e51;
 $link2_hover_color:         #fff;
 $link3_color:               #fff;
@@ -26,14 +26,16 @@ $footer_text_color:         #A6A6A6;/**/
 $footer_text_color_hover:   #737373;/**/
 
 //Form
-$input_bg:                  #3D3A3D;
-$input_hover_bg:            #646464;
-$input_txt_family:          $font_family;
-$input_txt_color:           #fff;
-$input_hover_txt_color:     $input_txt_color;
-$input_placeholder_color:   #BBBABB;
-$input_border_radius:       0;
-$textarea_border_radius:    10px;
+$input_bg:                  #fff;/**/
+$input_hover_bg:            $input_bg;/**/
+$input_txt_family:          $font_family;/**/
+$input_txt_color:           #060606;/**/
+$input_hover_txt_color:     $input_txt_color;/**/
+$input_placeholder_color:   $input_txt_color;/**/
+$input_border:              1px solid #131313;/**/
+$input_hover_border:        1px solid #DBDBDB;/**/
+$input_border_radius:       10px;/**/
+$textarea_border_radius:    10px;/**/
 
 //Custom Checkbox
 $checkbox_xs_padding_left:      2rem;
@@ -43,22 +45,22 @@ $checkbox_xs_left:              -2rem;
 $checkbox_xs_top:               -0.2rem;
 
 $checkbox_padding_left:         2.75rem;
-$checkbox_width:                1.875rem;
-$checkbox_height:               1.875rem;
+$checkbox_width:                1.625rem;
+$checkbox_height:               1.625rem;
 $checkbox_left:                 -2.6rem;
 $checkbox_top:                  -0.2rem;
 
 $checkbox_txt_family:           $font_family;
-$checkbox_txt_xs_size:          15px;
-$checkbox_txt_size:             20px;
-$checkbox_txt_xs_lh:            20px;
-$checkbox_txt_lh:               27px;
-$checkbox_bg_color:             #3D3A3D;
-$checkbox_checked_bg_color:     $checkbox_bg_color;
-$checkbox_border:               1px solid $checkbox_bg_color;
-$checkbox_checked_border_color: $checkbox_bg_color;
-$checkbox_active_bg_color:      #514e51;
-$checkbox_bg_icon:              "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 64 64' enable-background='new 0 0 64 64' xml:space='preserve'%3E%3Cg%3E%3Cpath fill='%23fa4f4f' d='M23.5,54.9c0,0-0.1,0-0.1,0c-1.4,0-2.8-0.6-3.7-1.7l-18.3-20c-1.9-2.1-1.8-5.4,0.3-7.4 c2.1-2,5.4-1.8,7.4,0.3l14.6,16l31.4-31.4c2-2,5.3-2,7.4,0c2,2,2,5.3,0,7.4L27.2,53.4C26.2,54.3,24.9,54.9,23.5,54.9z'/%3E%3C/g%3E%3C/svg%3E%0A";
+$checkbox_txt_xs_size:          15px;/**/
+$checkbox_txt_size:             18px;/**/
+$checkbox_txt_xs_lh:            1.2;/**/
+$checkbox_txt_lh:               1.2;/**/
+$checkbox_bg_color:             #fff;/**/
+$checkbox_checked_bg_color:     $checkbox_bg_color;/**/
+$checkbox_border:               1px solid #131313;/**/
+$checkbox_checked_border_color: #131313;/**/
+$checkbox_active_bg_color:      #FF6699;/**/
+$checkbox_bg_icon:              "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 64 64' enable-background='new 0 0 64 64' xml:space='preserve'%3E%3Cg%3E%3Cpath fill='%23FF6699' d='M23.5,54.9c0,0-0.1,0-0.1,0c-1.4,0-2.8-0.6-3.7-1.7l-18.3-20c-1.9-2.1-1.8-5.4,0.3-7.4 c2.1-2,5.4-1.8,7.4,0.3l14.6,16l31.4-31.4c2-2,5.3-2,7.4,0c2,2,2,5.3,0,7.4L27.2,53.4C26.2,54.3,24.9,54.9,23.5,54.9z'/%3E%3C/g%3E%3C/svg%3E%0A";
 
 //Custom RadioButton
 $radio_xs_padding_left:      2rem;
@@ -68,25 +70,31 @@ $radio_xs_left:              -2rem;
 $radio_xs_top:               -0.2rem;
 
 $radio_padding_left:         2.75rem;
-$radio_width:                1.875rem;
-$radio_height:               1.875rem;
+$radio_width:                1.625rem;
+$radio_height:               1.625rem;
 $radio_left:                 -2.6rem;
 $radio_top:                  -0.2rem;
 
 $radio_txt_family:           $font_family;
-$radio_txt_xs_size:          15px;
-$radio_txt_size:             20px;
-$radio_txt_xs_lh:            20px;
-$radio_txt_lh:               27px;
-$radio_bg_color:             #3D3A3D;
-$radio_checked_bg_color:     $radio_bg_color;
-$radio_border:               1px solid $radio_bg_color;
-$radio_checked_border_color: $radio_bg_color;
-$radio_active_bg_color:      #514e51;
-$radio_bg_icon:              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='4' fill='%23FA4F4F'/%3E%3C/svg%3E";
+$radio_txt_xs_size:          15px;/**/
+$radio_txt_size:             18px;/**/
+$radio_txt_xs_lh:            1.2;/**/
+$radio_txt_lh:               1.2;/**/
+$radio_bg_color:             #fff;/**/
+$radio_checked_bg_color:     $radio_bg_color;/**/
+$radio_border:               1px solid #131313;/**/
+$radio_hover_border:         1px solid #DBDBDB;/**/
+$radio_checked_border_color: $radio_bg_color;/**/
+$radio_active_bg_color:      #FF6699;/**/
+$radio_bg_icon:              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='4' fill='%23FF6699'/%3E%3C/svg%3E";
 
 //Custom Swich
 //Soon...
+$switch_content_0: 'Off';
+$switch_content_1: 'On';
+$switch_content_bg: $switch_content_0 + '\00a0\00a0\00a0\00a0\00a0' + $switch_content_1;
+$switch_distance_text: 18px;
+$switch_left_offset: 57px;
 
 //Bootstrap container width
 @function get-container-width($key: 'md') {

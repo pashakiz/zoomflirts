@@ -8,6 +8,11 @@
     max-width: 300px;
   }
 }
+.settings-switch {
+  @media (min-width: 330px) {
+    max-width: 301px;
+  }
+}
 .profile-photo {
   display: flex;
   align-items: center;
@@ -29,3 +34,4 @@
     }
   }
 }
+

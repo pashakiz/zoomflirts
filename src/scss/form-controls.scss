@@ -252,7 +252,7 @@ textarea.form-control {
   }
 }
 
-.custom-switch.custom-control {
+.custom-switch {
   &.custom-control {
     padding-left: calc(3rem + #{$switch_left_offset});
     cursor: pointer;
@@ -261,21 +261,22 @@ textarea.form-control {
     line-height: 1.5;
     font-family: $font_family;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 15px;
+    padding-top: 6px;
     color: #060606;
     cursor: pointer;
     &::before {
-      line-height: 1.8;
+      line-height: 2;
       content: $switch_content_bg;
       color: #CCC;
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 500;
       left: calc(-87px - #{$switch_distance_text});
-      width: 88px;
+      width: 75px;
       pointer-events: all;
       border-radius: 10px;
       background-color: #fff;
-      height: 30px;
+      height: 28px;
       top: 2px;
       border: 1px solid #ccc;
       padding: 0 10px;
@@ -289,12 +290,27 @@ textarea.form-control {
       color: #fff;
       text-align: center;
       top: calc(.25rem - 2px);
-      left: calc(-87px - #{$switch_distance_text});
-      width: calc(3.0625rem - 5px);
-      height: 30px;
+      left: calc(-87px - 15px);
+      width: calc(3.0625rem - 11px);
+      height: 28px;
       background-color: #ccc;
       border-radius: 10px;
-      transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out, width .15s ease-in-out, left .15s ease-in-out;
+    }
+    @media (min-width: 768px) {
+      font-size: 17px;
+      padding-top: 5px;
+      &::before {
+        line-height: 1.8;
+        font-size: 16px;
+        width: 88px;
+        height: 30px;
+      }
+      &::after {
+        left: calc(-87px - 15px);
+        width: calc(3.0625rem - 5px);
+        height: 30px;
+      }
     }
   }
   .custom-control-input {
@@ -310,15 +326,39 @@ textarea.form-control {
         &::after {
           content: 'On';
           background-color: #FF6699;
+          left: calc(-87px - 23px);
           -webkit-transform: translateX(2.9rem);
           transform: translateX(2.9rem);
+          @media (min-width: 768px) {
+            left: calc(-87px - 15px);
+          }
+        }
+        &:active {
+          &::before {
+            color: #060606;
+          }
+          &::after {
+            width: calc(3.0625rem);
+            left: calc(-87px - 23px - 11px);
+            @media (min-width: 768px) {
+              width: calc(3.0625rem + 5px);
+              left: calc(-87px - 15px - 11px);
+            }
+          }
         }
       }
     }
     &:active {
       ~.custom-control-label {
         &::before {
-          background-color: #f0f1f3;
+          background-color: #fff;
+          color: #ccc;
+        }
+        &::after {
+          width: calc(3.0625rem - 5px);
+          @media (min-width: 768px) {
+            width: calc(3.0625rem + 5px);
+          }
         }
       }
     }
@@ -336,6 +376,22 @@ textarea.form-control {
         }
       }
     }
+  }
+}
+.custom-switch {
+  &.custom-switch__sub {
+    &.custom-control {
+      padding-left: calc(3rem + #{$switch_left_offset});
+    }
+    .custom-control-label {
+      //...
+      @media (min-width: 768px) {
+        line-height: 1.5;
+        font-size: 22px;
+        padding-top: 0;
+      }
+    }
+    //...
   }
 }
 

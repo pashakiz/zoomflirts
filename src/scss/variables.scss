@@ -93,8 +93,8 @@ $radio_bg_icon:              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org
 $switch_content_0: 'Off';
 $switch_content_1: 'On';
 $switch_content_bg: $switch_content_0 + '\00a0\00a0\00a0\00a0\00a0' + $switch_content_1;
-$switch_distance_text: 18px;
-$switch_left_offset: 57px;
+$switch_distance_text: 15px;
+$switch_left_offset: 54px;
 
 //Bootstrap container width
 @function get-container-width($key: 'md') {

@@ -263,12 +263,12 @@ textarea.form-control {
     font-weight: 300;
     font-size: 15px;
     padding-top: 6px;
-    color: #060606;
+    color: $switch_txt_color1;
     cursor: pointer;
     &::before {
       line-height: 2;
       content: $switch_content_bg;
-      color: #CCC;
+      color: $switch_txt_color2;
       font-size: 13px;
       font-weight: 500;
       left: calc(-87px - #{$switch_distance_text});
@@ -287,7 +287,7 @@ textarea.form-control {
       content: 'Off';
       font-size: 16px;
       font-weight: 500;
-      color: #fff;
+      color: $switch_txt_color3;
       text-align: center;
       top: calc(.25rem - 2px);
       left: calc(-87px - 15px);
@@ -318,7 +318,7 @@ textarea.form-control {
       ~.custom-control-label {
         &::before {
           content: $switch_content_bg;
-          color: #060606;
+          color: $switch_txt_color1;
           background-color: #fff;
           border: 1px solid #131313;
           padding: 0 10px;
@@ -327,7 +327,6 @@ textarea.form-control {
           content: 'On';
           background-color: #FF6699;
           left: calc(-87px - 23px);
-          -webkit-transform: translateX(2.9rem);
           transform: translateX(2.9rem);
           @media (min-width: 768px) {
             left: calc(-87px - 15px);
@@ -335,7 +334,7 @@ textarea.form-control {
         }
         &:active {
           &::before {
-            color: #060606;
+            color: $switch_txt_color1;
           }
           &::after {
             width: calc(3.0625rem);
@@ -352,7 +351,7 @@ textarea.form-control {
       ~.custom-control-label {
         &::before {
           background-color: #fff;
-          color: #ccc;
+          color: $switch_txt_color2;
         }
         &::after {
           width: calc(3.0625rem - 5px);

@@ -1,4 +1,8 @@
-.settings-form {}
+.settings-form {
+  @media (min-width: 992px) {
+    max-width: 406px;
+  }
+}
 .settings-photo {
   margin: 0 auto;
   @media (min-width: 321px) {

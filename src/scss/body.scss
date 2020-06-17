@@ -37,6 +37,22 @@ body {
     padding: 74px 148px 20px;
   }
 }
+.content {
+  &.content_settings {
+    @media (min-width: 992px) {
+      padding: 0 60px 0;
+    }
+    @media (min-width: 1200px) {
+      padding: 0 150px 20px;
+    }
+    @media (min-width: 1500px) {
+      padding: 0 225px 20px;
+    }
+    @media (min-width: 1920px) {
+      padding: 0 280px 20px;
+    }
+  }
+}
 h1 {
   font-weight: 300;
   font-size: 34px;

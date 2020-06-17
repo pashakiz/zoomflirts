@@ -9,7 +9,8 @@
   }
 }
 .settings-switch {
-  @media (min-width: 330px) {
+  max-width: 100%;
+  @media (min-width: 992px) {
     max-width: 301px;
   }
 }

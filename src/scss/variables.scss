@@ -98,6 +98,8 @@ $switch_txt_color2: #ccc;
 $switch_txt_color3: #fff;
 $switch_distance_text: 15px;
 $switch_left_offset: 54px;
+$switch_left_offset_sub: 100px;
+$switch_distance_text_sub: 60px;
 
 //Bootstrap container width
 @function get-container-width($key: 'md') {

@@ -187,12 +187,18 @@ a {
       height: $footer_height_mob;
     }
     @media (min-width: 768px) {
-      & {
-        margin-bottom: $body_mb + $footer_height;
-      }
+      margin-bottom: $body_mb + $footer_height;
       .footer {
         height: $footer_height;
       }
+    }
+  }
+}
+.main {
+  &.main_overflow {
+    overflow: hidden;
+    @media (min-width: 768px) {
+      overflow: auto;
     }
   }
 }

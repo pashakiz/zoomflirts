@@ -87,6 +87,12 @@ textarea.form-control {
     margin-bottom: 2.5rem;
   }
 }
+.form-group_40up {
+  margin-top: 3.25rem;
+  @media (min-width: 768px) {
+    margin-top: 2.5rem;
+  }
+}
 .custom-checkbox {
   &.custom-control {
     padding-left: $checkbox_xs_padding_left;
@@ -377,20 +383,77 @@ textarea.form-control {
     }
   }
 }
+
 .custom-switch {
   &.custom-switch__sub {
+    &::after {
+      content: '';
+      display: block;
+      width: 200%;
+      height: 1px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 32px;
+      position: relative;
+      left: -50%;
+      @media (min-width: 768px) {
+        display: none;
+        padding-bottom: 0;
+        border: none;
+      }
+    }
     &.custom-control {
-      padding-left: calc(3rem + #{$switch_left_offset});
+      padding-left: 0;
+      padding-top: 36px;
+      @media (min-width: 768px) {
+        padding-left: calc(3rem + #{$switch_left_offset_sub});
+        padding-top: 0;
+      }
     }
     .custom-control-label {
-      //...
+      &::before {
+        left: 0;
+        top: -36px;
+        @media (min-width: 768px) {
+          left: calc(-87px - #{$switch_distance_text_sub});
+          top: 2px;
+        }
+      }
+      &::after {
+        left: 0;
+        top: -36px;
+        @media (min-width: 768px) {
+          left: calc(-87px - #{$switch_distance_text_sub});
+          top: calc(.25rem - 2px);
+        }
+      }
       @media (min-width: 768px) {
         line-height: 1.5;
         font-size: 22px;
         padding-top: 0;
       }
     }
-    //...
+    .custom-control-input {
+      &:checked {
+        ~ .custom-control-label {
+          &::before {}
+          &::after {
+            left: -8px;
+            @media (min-width: 768px) {
+              left: calc(-87px - #{$switch_distance_text_sub});
+            }
+          }
+          &:active {
+            &::before {}
+            &::after {
+              left: -19px;
+              @media (min-width: 768px) {
+                left: calc(-87px - #{$switch_distance_text_sub} - 12px);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

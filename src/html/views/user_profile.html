@@ -1,16 +1,21 @@
 <%= _.template(require('./../includes/header.html'))() %>
-<main class="main">
+<main class="main main_dark">
+    <div class="main__slider-bg">
+        <div class="user-profile-slider owl-carousel">
+            <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ph01.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ph02.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ph01.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ph02.jpg');"></div>
+            <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
+        </div>
+        <div class="container">
+            <a href="#goto" class="btn btn_2 btn_w100">Claim Her</a>
+        </div>
+    </div>
     <div class="container">
         <div class="content">
-            <div class="user-profile-slider owl-carousel d-lg-none">
-                <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ph01.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ph02.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ph01.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ph02.jpg');"></div>
-                <div class="slide" style="background-image: url('img/photos/ava.jpg');"></div>
-            </div>
             <div class="d-lg-flex justify-content-start">
                 <div class="user-profile-images flex-grow-1 d-none d-lg-block">
                     <div class="user-profile-photo">
@@ -43,7 +48,7 @@
                             <img class="user-profile-gallery__img img-fluid" src="img/photos/ph02.jpg" alt="">
                         </div>
                     </div>
-                    <a href="#goto" class="btn btn_w100 form-group_30up d-none d-lg-block">Claim Her</a>
+                    <a href="#goto" class="btn btn_2 btn_w100 form-group_30up">Claim Her</a>
                 </div>
                 <div class="user-profile-info flex-grow-0">
                     <div class="user-profile-name">Jennifer, 24</div>

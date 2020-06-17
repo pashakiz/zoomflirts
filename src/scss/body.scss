@@ -217,6 +217,19 @@ a {
       overflow: auto;
     }
   }
+  &.main_dark {
+    background-color: $bg_dark_1;
+  }
+}
+.main__slider-bg {
+  width: 100%;
+  height: 335px;
+  display: block;
+  background-color: #fff;
+  position: relative;
+  @media (min-width: 992px) {
+    display: none;
+  }
 }
 
 .secondscreen {

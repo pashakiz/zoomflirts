@@ -502,8 +502,49 @@ textarea.form-control {
     font-size: 17px;
     padding: 1.25rem 2.5rem;
   }
-  &.btn_2 {}
+  &.btn_2 {
+    font-size: 13px;
+    padding: 0.9375rem 1.3rem;
+    position: relative;
+    @media (min-width: 768px) {
+      font-size: 16px;
+      padding: 1.25rem 2.5rem 1rem;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 11px;
+      background-image: url('../img/bg/btn2_mob.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center top;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -22px;
+      transition: background-image 0.15s ease-in-out;
+      @media (min-width: 768px) {
+        width: 70px;
+        height: 20px;
+        bottom: -17px;
+        margin-left: -35px;
+        background-image: url('../img/bg/btn2.svg');
+      }
+    }
+    &:hover {
+      &::after {
+        background-image: url('../img/bg/btn2_mob_hover.svg');
+        @media (min-width: 768px) {
+          background-image: url('../img/bg/btn2_hover.svg');
+        }
+      }
+    }
+  }
   &.btn_3 {
+    background-color: #060606;
+  }
+  &.btn_4 {
     font-size: 14px;
     padding: 0.4375rem 1.3rem;
     background-color: #131313;

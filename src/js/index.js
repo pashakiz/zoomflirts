@@ -63,14 +63,18 @@ $(function() {
 
         //slider (Profile gallery) for mobile
         $('.owl-carousel.user-profile-slider').owlCarousel({
+            loop: true,
+            dots: false,
             items: 1,
-            dots:true
+            margin: 6,
+            autoWidth: true
         });
 
         //gallery on desktop
-        $('.user-profile-gallery').on('click', '.user-profile-gallery__img', function(){
-            let url = $(this).attr('src');
-            $('.profile-photo-img').attr('src', url);
+        $('.user-profile-gallery').on('click', '.user-profile-gallery__item', function(){
+            let url = $(this).css('background-image');
+            url = url.replace('url(','').replace(')','').replace(/\"/gi, "");
+            $('.user-profile-photo').css('background-image', 'url(' + url + ')');;
         });
 
     });

@@ -1,4 +1,5 @@
 .header {
+  background-color: #fff;
   .notice {
     display: inline-block;
     background-color: $btn_bg_color;
@@ -19,9 +20,9 @@
   }
 }
 .header_page {
-  margin-bottom: 42px;
+  padding-bottom: 42px;
   @media (min-width: 768px) {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 }
 

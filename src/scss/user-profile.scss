@@ -1,23 +1,28 @@
 .user-profile-slider {
-  width: 290px;
-  height: 290px;
+  width: 100%;
+  height: 377px;
   position: relative;
-  border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
+  padding: 0 0 0 15px;
+  z-index: 10;
   .slide {
-    width: 100%;
-    height: 290px;
+    width: 290px;
+    height: 377px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 17px;
   }
   &.owl-carousel {
+    .owl-stage-outer {
+      overflow: visible;
+    }
     .owl-dots {
       text-align: center;
       position: absolute;
-      width: 100%;
-      bottom: 24px;
+      width: calc(100% - 30px);
+      bottom: 34px;
       padding: 0 25px;
     }
     button.owl-dot {
@@ -36,158 +41,179 @@
   }
 }
 
+.user-profile-btn {
+  position: relative;
+  margin-top: -30px;
+  z-index: 20;
+  @media (min-width: 992px) {
+    margin-top: -39px;
+  }
+}
+
+.user-profile-content {
+  @media (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+}
+
 .user-profile-images {
   @media (min-width: 992px) {
-    & {
-      width: 350px;
-      min-width: 350px;
-      max-width: 350px;
-      margin-right: 100px;
-    }
-  }
-  @media (min-width: 1200px) {
-    & {
-      width: 486px;
-      min-width: 486px;
-      max-width: 486px;
-    }
-  }
-  @media (min-width: 1920px) {
-    & {
-      margin-right: 150px;
-    }
+    width: 370px;
+    min-width: 370px;
+    max-width: 370px;
+    margin-right: 68px;
   }
 }
 .user-profile-photo {
   display: block;
   max-width: 100%;
-  height: 300px;
-  max-height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 38px;
+  height: 490px;
+  max-height: 490px;
+  border-radius: 22px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
   @media (min-width: 992px) {
-    & {
-      height: 350px;
-      max-height: 350px;
-    }
-  }
-  @media (min-width: 1200px) {
-    & {
-      height: 486px;
-      max-height: 486px;
-    }
+    height: 490px;
+    max-height: 490px;
   }
 }
-.profile-photo-img {}
 .user-profile-gallery {
-  margin-bottom: 22px;
   flex-wrap: wrap;
   .user-profile-gallery__item {
-    width: 20%;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 101px;
+    height: 106px;
+    border-radius: 10px;
     cursor: pointer;
     margin-bottom: 5%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
   }
-  .user-profile-gallery__img {}
 }
 
 .user-profile-info {
-  margin-top: 30px;
+  margin-top: 104px;
+  @media (min-width: 768px) {
+    margin-top: 130px;
+  }
+  @media (min-width: 992px) {
+    max-width: 340px;
+    margin-top: 0;
+  }
 }
 .user-profile-name {
-  font-family: "ActaDisplay", sans-serif;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 47px;
   color: #fff;
-  margin-bottom: 21px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
   text-align: center;
+  letter-spacing: 2px;
   @media (min-width: 992px) {
-    & {
-      font-size: 40px;
-      line-height: 53px;
-      margin-bottom: 26px;
-      text-align: left;
-    }
+    font-size: 25px;
+    margin-bottom: 9px;
+    text-align: left;
+    margin-top: 8px;
   }
 }
 .user-profile-loc {
-  font-weight: 500;
-  margin-bottom: 60px;
-  color: #C9C9C9;
+  font-weight: 300;
+  margin-bottom: 31px;
+  color: #fff;
+  font-size: 14px;
   text-align: center;
   @media (min-width: 992px) {
-    & {
-      margin-bottom: 67px;
-      text-align: left;
-    }
+    font-size: 18px;
+    margin-bottom: 55px;
+    text-align: left;
   }
 }
 .user-profile-title {
-  font-family: "ActaDisplay", sans-serif;
   font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  @media (min-width: 992px) {
+    font-size: 18px;
+    margin-bottom: 23px;
+    text-align: left;
+  }
+}
+.user-profile-about {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 29px;
+  color: #fff;
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 35px;
+    margin-top: 52px;
+  }
+}
+.user-profile-about__title {
+  display: block;
+  font-weight: 600;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 29px;
+  margin-bottom: 23px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
   @media (min-width: 768px) {
-    & {
-      font-size: 23px;
-      margin-bottom: 50px;
-    }
+    display: inline;
+    margin-right: 30px;
+    margin-bottom: 0;
+    text-align: left;
   }
 }
 
 .compatibility {
-  @media (min-width: 768px) {
-    &.compatibility_mb {
-      margin-bottom: 70px;
+  &.compatibility_mb {
+    margin-bottom: 64px;
+    @media (min-width: 768px) {
+      margin-bottom: 58px;
     }
   }
   .compatibility__chart {
     +.compatibility__chart {
-      margin-left: 40px;
+      margin-left: 60px;
       @media (min-width: 768px) {
         & {
-          margin-left: 56px;
+          margin-left: 55px;
         }
       }
     }
   }
-  .compatibility__img {
-    width: 46px;
-    height: 41px;
+  .compatibility__progress {
+    height: 5px;
+    border-radius: 0;
+    background-color: #252525;
     @media (min-width: 768px) {
-      & {
-        width: 59px;
-        height: 54px;
-      }
+      height: 10px;
+    }
+    .progress-bar {
+      background-color: $btn_bg_color;
     }
   }
   .compatibility__title {
-    font-weight: 500;
-    color: #C9C9C9;
-    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 15px;
     @media (min-width: 768px) {
-      & {
-        margin-top: 25px;
-      }
+      font-size: 18px;
+      margin-top: 22px;
     }
-  }
-  &.compatibility_mb {
-    margin-bottom: 66px;
   }
   &.compatibility_list {
-    .compatibility__img {
-      width: 24px;
-      height: 18px;
-      @media (min-width: $user_list_item_breakpoint) {
-        width: 59px;
-        height: 54px;
-      }
-    }
     .compatibility__title {
       margin-top: 5px;
       font-size: 7px;
@@ -208,14 +234,6 @@
     }
   }
   &.compatibility_login {
-    .compatibility__img {
-      width: 36px;
-      height: 29px;
-      @media (min-width: $user_list_item_breakpoint) {
-        width: 59px;
-        height: 54px;
-      }
-    }
     .compatibility__title {
       margin-top: 8px;
       font-size: 10px;

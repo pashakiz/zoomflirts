@@ -18,8 +18,8 @@ $link_color:                #060606;/**/
 $link_hover_color:          $btn_bg_color;/**/
 $link2_color:               #514e51;
 $link2_hover_color:         #fff;
-$link3_color:               #fff;
-$link3_hover_color:         #A7A7A7;
+$link3_color:               #fff;/**/
+$link3_hover_color:         $btn_bg_color;/**/
 $footer_height:             138px;/**/
 $footer_height_mob:         265px;/**/
 $footer_text_color:         #A6A6A6;/**/
@@ -88,8 +88,7 @@ $radio_checked_border_color: $radio_bg_color;/**/
 $radio_active_bg_color:      #FF6699;/**/
 $radio_bg_icon:              "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='4' fill='%23FF6699'/%3E%3C/svg%3E";
 
-//Custom Swich
-//Soon...
+//Custom Switch
 $switch_content_0: 'Off';
 $switch_content_1: 'On';
 $switch_content_bg: $switch_content_0 + '\00a0\00a0\00a0\00a0\00a0' + $switch_content_1;

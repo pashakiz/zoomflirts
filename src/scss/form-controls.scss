@@ -49,8 +49,14 @@ body textarea:required:valid {
     opacity: 1;
   }
   @media (min-width: 768px) {
-    padding: 1.125rem 1.875rem 1.5rem;
+    padding: 1.25rem 1.875rem;
     font-size: $checkbox_txt_size;
+  }
+  &.form-control_login {
+    border: none;
+    &:hover, &:focus {
+      background-color: #FFE8F0;
+    }
   }
 }
 input.form-control {
@@ -541,6 +547,9 @@ textarea.form-control {
   }
   &.btn_3 {
     background-color: #060606;
+    &:hover {
+      background-color: $bg_dark_1;
+    }
   }
   &.btn_4 {
     font-size: 14px;

@@ -41,40 +41,61 @@
 .logo_main {
   margin: 180px 20px 40px;
   @media (min-width: 768px) {
-    & {
-      margin: 40px 20px 40px 40px;
-    }
+    margin: 40px 20px 40px 40px;
   }
   @media (min-width: 992px) {
-    & {
-      margin: 90px 20px 90px 90px;
-    }
+    margin: 90px 20px 90px 90px;
   }
   @media (min-width: 1200px) {
-    & {
-      margin: 90px 20px 90px 90px;
-    }
+    margin: 90px 20px 90px 90px;
   }
   .logo__img {
     margin-bottom: 20px;
     @media (min-width: 768px) {
-      & {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
   }
   .logo__text {
     font-size: 15px;
     @media (min-width: 768px) {
-      & {
-        font-size: 18px;
-      }
+      font-size: 18px;
     }
     @media (min-width: 992px) {
-      & {
-        color: $logo_main_color;
-        font-size: 21px;
-      }
+      color: $logo_main_color;
+      font-size: 21px;
+    }
+  }
+}
+
+.logo_login {
+  justify-content: flex-start;
+  flex-direction: row;
+  .logo__img {
+    width: 43px;
+    height: 31px;
+    background-image: url('../img/icons/logo.svg');
+    margin-right: 15px;
+    @media (min-width: 768px) {
+      width: 43px;
+      height: 31px;
+      margin-right: 15px;
+    }
+    @media (min-width: 992px) {
+      width: 99px;
+      height: 71px;
+      margin-right: 34px;
+    }
+  }
+  .logo__text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 3px;
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+    @media (min-width: 992px) {
+      font-size: 26px;
     }
   }
 }

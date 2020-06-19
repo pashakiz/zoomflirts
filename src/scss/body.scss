@@ -164,18 +164,13 @@ a {
 .link3 {
   font-family: $link_txt_family;
   font-weight: 300;
-  font-style: italic;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 15px;
   color: $link3_color;
   &:hover {
     color: $link3_hover_color;
   }
   @media (min-width: 768px) {
-    & {
-      font-size: 19px;
-      line-height: 26px;
-    }
+    font-size: 17px;
   }
 }
 .preloader {

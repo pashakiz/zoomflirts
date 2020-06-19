@@ -242,20 +242,25 @@
       }
     }
   }
+
   &.compatibility_login {
+    padding: 0 14px 29px;
+    @media (min-width: $user_list_item_breakpoint) {
+      padding: 0 31px 50px;
+    }
     .compatibility__title {
       margin-top: 8px;
-      font-size: 10px;
+      font-size: 13px;
       @media (min-width: $user_list_item_breakpoint) {
-        margin-top: 16px;
-        font-size: 16px;
+        margin-top: 13px;
+        font-size: 15px;
       }
     }
     .compatibility__chart {
       +.compatibility__chart {
-        margin-left: 22px;
+        margin-left: 10px;
         @media (min-width: $user_list_item_breakpoint) {
-          margin-left: 71px;
+          margin-left: 20px;
         }
       }
     }

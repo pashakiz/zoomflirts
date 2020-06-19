@@ -50,9 +50,7 @@
     opacity: 0.75;
   }
   @media (min-width: 768px) {
-    & {
-      display: none;
-    }
+    display: none;
   }
 }
 .header__userinfo {
@@ -60,9 +58,7 @@
   padding-left: 24px;
   max-width: 500px;
   @media (min-width: 768px) {
-    & {
-      display: block;
-    }
+    display: block;
   }
   .notice {
     position: relative;
@@ -106,140 +102,112 @@
   word-break: break-all;
   padding-right: 30px;
   @media (min-width: 768px) {
-    & {
-      font-size: 18px;
-    }
+    font-size: 18px;
   }
 }
 
-.header__firstscreen {
+.header-firstscreen-wrap {
   width: 100%;
-  height: auto;
+  height: 618px;
+  margin-bottom: 50px;
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: center top;
   background-size: cover;
-  &.bg01 {
-    background-position: 100%;
+  @media (min-width: 992px) {
+    height: 850px;
+    margin-bottom: 167px;
+    background-image: none !important;
   }
-  &.bg02 {
-    background-position: 100% 15%;
+  &.bg01mob {
+    background-image: url('../img/bg/mobile/bg01.jpg');
   }
-  &.bg03 {
-    background-position: 100% 15%;
+  &.bg02mob {
+    background-image: url('../img/bg/mobile/bg02.jpg');
   }
-  @media (min-width: 768px) {
-    & {
-      background-position: top right !important;
-      background-size: 54%;
-      position: relative;
-    }
+  &.bg03mob {
+    background-image: url('../img/bg/mobile/bg03.jpg');
   }
-  &.bg01 {
-    background-image: url('../img/bg/mobile/bg-index-01.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-index-01.jpg');
-      }
-    }
+  &.bg04mob {
+    background-image: url('../img/bg/mobile/bg04.jpg');
   }
-  &.bg02 {
-    background-image: url('../img/bg/mobile/bg-index-02.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-index-02.jpg');
-      }
-    }
-  }
-  &.bg03 {
-    background-image: url('../img/bg/mobile/bg-index-03.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-index-03.jpg');
-      }
-    }
-  }
-  &.bg-login-01 {
-    background-image: url('../img/bg/mobile/bg-index-01.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-size: 53%;
-        background-image: url('../img/bg/desktop/bg-login-01.jpg');
-      }
-    }
-  }
-  &.bg-login-02 {
-    background-image: url('../img/bg/mobile/bg-index-02.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-login-02.jpg');
-      }
-    }
-  }
-  &.bg-login-03 {
-    background-image: url('../img/bg/mobile/bg-index-03.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-login-03.jpg');
-      }
-    }
-  }
-  &.bg-login-04 {
-    background-image: url('../img/bg/mobile/bg-index-02.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-login-04.jpg');
-      }
-    }
-  }
-  &.bg-login-05 {
-    background-image: url('../img/bg/mobile/bg-index-03.jpg');
-    @media (min-width: 768px) {
-      & {
-        background-image: url('../img/bg/desktop/bg-login-05.jpg');
-      }
-    }
+  &.bg05mob {
+    background-image: url('../img/bg/mobile/bg05.jpg');
   }
 }
 
-.header__firstscreen-wrap {
-  position: relative;
-  z-index: 10;
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 180px;
-    background-image: url('../img/bg/mobile/bg-main-up.svg');
-    background-size: 100% 100%;
-    background-position: 0 100%;
+.header-firstscreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  background-color: rgba(0,0,0,0.21);
+  padding: 37px 15px 62px;
+  @media (min-width: 992px) {
+    padding: 0;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.header-block {
+  width: 100%;
+  @media (min-width: 992px) {
+    width: 50%;
+    height: 100%;
+  }
+  &.header-block_bg-red {
+    @media (min-width: 992px) {
+      background-color: $btn_bg_color;
+    }
+  }
+  &.header-block_bg-img {
     background-repeat: no-repeat;
-    position: absolute;
-    bottom: -2px;
-    z-index: -10;
-  }
-  @media (min-width: 768px) {
-    & {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    &.bg01 {
+      @media (min-width: 992px) {
+        background-image: url('../img/bg/desktop/bg01.jpg');
+      }
     }
-    &:after {
-      content: none;
-      display: none;
+    &.bg02 {
+      @media (min-width: 992px) {
+        background-image: url('../img/bg/desktop/bg02.jpg');
+      }
+    }
+    .header-block__overlay {
+      @media (min-width: 992px) {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.46);
+      }
     }
   }
 }
 
-.header__bgimg {
-  display: none;
-  @media (min-width: 768px) {
-    display: inline;
+.header-block__bgtext {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &.signup {
+    background: url('../img/bg/mobile/bg-text-signup.svg') 50% 13% no-repeat;
+    background-size: 100%;
+    @media (min-width: 992px) {
+      background: url('../img/bg/desktop/bg-text-signup.svg') 50% 40% no-repeat;
+      background-size: 100%;
+    }
+  }
+  &.login {
+    background: url('../img/bg/mobile/bg-text-login.svg') 50% 13% no-repeat;
+    background-size: 105%;
+    @media (min-width: 992px) {
+      background: url('../img/bg/desktop/bg-text-login.svg') 50% 14% no-repeat;
+      background-size: 100%;
+    }
   }
 }
+
 
 .header__titlebox {
   margin-bottom: 20px;
@@ -253,16 +221,14 @@
 }
 
 .header__form {
-  padding-top: 48px;
+  padding-top: 90px;
   @media (min-width: 768px) {
-    width: 411px;
-    padding-top: 15px;
+    width: 406px;
+    margin: 0 auto;
+    padding-top: 40px;
   }
   @media (min-width: 992px) {
-    padding-top: 30px;
-  }
-  @media (min-width: 1920px) {
-    padding-top: 131px;
+    padding-top: 0;
   }
 }
 
@@ -270,7 +236,6 @@
   width: 210px;
   margin: 0 auto 40px;
   text-align: center;
-  font-family: "ActaDisplay", sans-serif;
   font-weight: 300;
   font-size: 34px;
   line-height: 45px;

@@ -1,43 +1,45 @@
 <%= _.template(require('./../includes/header-main.html'))() %>
     <header class="header">
-        <div class="header__firstscreen bg01">
-            <img class="header__bgimg img-fluid" src="./img/bg/desktop/bg-index-firtscreen-top.svg" alt="">
-            <div class="header__firstscreen-wrap">
-                <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center">
-                    <div class="flex-grow-1 mr-auto-md">
-                        <div class="logo logo_main">
-                            <div class="logo__img"></div>
-                            <div class="logo__text">Live&nbsp;your&nbsp;wet&nbsp;dream</div>
+        <div class="header-firstscreen-wrap index bg01mob">
+            <div class="header-firstscreen header-firstscreen_main">
+                <div class="header-block header-block_bg-dark">
+                    <div class="header-block__bgtext index-logo">
+                        <div class="d-flex flex-lg-column justify-content-start justify-content-lg-center align-items-center w-100 h-100">
+                            <div class="d-flex justify-content-between justify-content-md-center align-items-center">
+                                <div class="logo logo_main flex-grow-1 flex-md-grow-0 mr-auto mr-md-0">
+                                    <div class="logo__img"></div>
+                                    <div class="logo__text">Zoomflirts</div>
+                                </div>
+                            </div>
+                            <a class="btn btn_index d-none d-lg-block" href="#">Unlock My Matches</a>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="header__titlebox">
-                                <div class="header__title">The&nbsp;best advisor&nbsp;in&nbsp;the dating&nbsp;world</div>
-                                <a class="btn" href="#">Unlock My Matches</a>
-                            </div>
+                <div class="header-block header-block_bg-red">
+                    <div class="header-block__bgtext index">
+                        <div class="header__titlebox">
+                            <div class="header__title">The best advisor in the dating world</div>
+                            <a class="btn btn_w100 d-lg-none" href="#">Unlock My Matches</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
     <main class="main">
         <div class="secondscreen">
-            <div class="container">
-                <h1 class="text-white">Meet <br>your dream</h1>
+            <div class="container d-lg-none">
+                <h2 class="h2_index">Meet your dream</h2>
             </div>
-            <div class="collage d-md-flex justify-content-md-end">
-                <img class="collage__img_xs" src="img/index-collage-sm.png" alt="">
+            <div class="collage d-md-flex justify-content-center">
+                <img class="collage__img_xs" src="img/index-collage-sm.jpg" alt="">
                 <img class="collage__img_lg" src="img/index-collage-lg.png" alt="">
+                <img class="collage__img_lg2" src="img/index-collage-lg2.png" alt="">
             </div>
         </div>
         <div class="index-content">
             <div class="container">
-                <h1 class="index-content__title">Release mine <br>combinations</h1>
+                <h1>Release mine <br>combinations</h1>
                 <p>We have created a unique combination system that consists of three main factors that produce similarity of thought and productive connections: Life, freedom and culture. NF, in an abbreviated form, connects people who have interests in similar activities, passions and future aspirations. We also add our own personal touch to the online dating process ensuring that your experience is special and exclusive to you.</p>
                 <p>Instead of spending weeks looking for your best combination, we send you a personalized combination every day by email. As these presentations have been carefully selected based on your NF (Life, Freedom and Culture) score, you can spend more time talking or planning your first night out.</p>
                 <p>We believe in unconditional sincerity and transparency. That's why our users' profiles reflect this in every possible way. With a simple and friendly layout, our profiles clearly show all the details you need to make an informed decision.</p>

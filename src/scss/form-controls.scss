@@ -564,6 +564,13 @@ textarea.form-control {
       padding: 0.625rem 1.3rem;
     }
   }
+  &.btn_index {
+    padding: 1.0625rem 1.3rem;
+    @media (min-width: 768px) {
+      letter-spacing: 2px;
+      padding: 1.25rem 4rem;
+    }
+  }
 }
 .btn_w100 {
   width: 100%;

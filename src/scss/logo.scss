@@ -38,31 +38,41 @@
     font-size: 18px;
   }
 }
+
 .logo_main {
-  margin: 180px 20px 40px;
-  @media (min-width: 768px) {
-    margin: 40px 20px 40px 40px;
-  }
+  justify-content: flex-start;
+  flex-direction: row;
   @media (min-width: 992px) {
-    margin: 90px 20px 90px 90px;
-  }
-  @media (min-width: 1200px) {
-    margin: 90px 20px 90px 90px;
+    flex-direction: column;
+    margin-bottom: 35px;
   }
   .logo__img {
-    margin-bottom: 20px;
+    width: 43px;
+    height: 31px;
+    background-image: url('../img/icons/logo.svg');
+    margin-right: 15px;
     @media (min-width: 768px) {
-      margin-bottom: 0;
+      width: 43px;
+      height: 31px;
+      margin-right: 15px;
+    }
+    @media (min-width: 992px) {
+      width: 142px;
+      height: 102px;
+      margin-right: 0;
+      margin-bottom: 41px;
     }
   }
   .logo__text {
-    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 3px;
     @media (min-width: 768px) {
-      font-size: 18px;
+      font-size: 12px;
     }
     @media (min-width: 992px) {
-      color: $logo_main_color;
-      font-size: 21px;
+      font-size: 19px;
     }
   }
 }

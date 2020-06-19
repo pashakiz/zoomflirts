@@ -6,9 +6,7 @@ body {
   background-color: $body_bg_color;
   line-height: 1.5;
   @media (min-width: 768px) {
-    & {
-      font-size: $font_size;
-    }
+    font-size: $font_size;
   }
   &.body_main {
     background-color: #fff;
@@ -81,18 +79,15 @@ body {
 }
 h1 {
   font-weight: 300;
-  font-size: 34px;
-  line-height: 45px;
-  color: $body_bg_color;
-  margin-bottom: 0;
-  &.text-white {
-    color: #fff;
-  }
+  font-size: 30px;
+  line-height: 40px;
+  color: #222;
+  margin-bottom: 28px;
+  text-align: center;
   @media (min-width: 768px) {
-    & {
-      font-size: 70px;
-      line-height: 100px;
-    }
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 89px;
   }
 }
 h2 {
@@ -107,6 +102,14 @@ h2 {
     font-size: 60px;
     line-height: 80px;
     margin-bottom: 72px;
+  }
+  &.h2_index {
+    font-size: 30px;
+    line-height: 40px;
+    @media (min-width: 768px) {
+      font-size: 60px;
+      line-height: 80px;
+    }
   }
 }
 h3 {
@@ -123,7 +126,7 @@ h3 {
   }
 }
 p {
-  line-height: 35px;
+  line-height: 30px;
   @media (min-width: 768px) {
     line-height: 40px;
   }
@@ -142,23 +145,6 @@ a {
   font-size: 15px;
   @media (min-width: 768px) {
     font-size: 18px;
-  }
-}
-.link2 {
-  font-family: $link_txt_family;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 15px;
-  line-height: 20px;
-  color: $link2_color;
-  &:hover {
-    color: $link2_hover_color;
-  }
-  @media (min-width: 768px) {
-    & {
-      font-size: 23px;
-      line-height: 31px;
-    }
   }
 }
 .link3 {
@@ -252,73 +238,27 @@ a {
 }
 
 .secondscreen {
-  background-color: $body_bg_color;
-  position: relative;
-  top: -2px;
-  padding-top: 110px;
-  background-image: url('../img/bg/mobile/bg-text.svg');
-  background-size: 160%;
-  background-position: 71% 136%;
-  background-repeat: no-repeat;
-  @media (min-width: 768px) {
-    & {
-      padding-top: 0;
-      background-size: 90%;
-      background-position: 30% 105%;
-      background-image: url('../img/bg/desktop/bg-text.svg');
-    }
+  margin-top: 40px;
+  @media (min-width: 992px) {
+    margin-top: 0;
   }
 }
 
 .index-content {
-  background-color: #fff;
-  padding-bottom: 10px;
-  &:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 245px;
-    background-image: url('../img/bg/mobile/bg-main-down.svg');
-    background-size: 100%;
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    position: relative;
-    top: -4px;
+  padding-bottom: 35px;
+  @media (min-width: 992px) {
+    padding-bottom: 130px;
   }
-  @media (min-width: 768px) {
-    &:before {
-      background-image: url('../img/bg/desktop/bg-index-firtscreen-bottom.svg');
-    }
-  }
-  @media (min-width: 1055px) {
-    &:before {
-      height: 300px;
-    }
-  }
-  @media (min-width: 1200px) {
-    &:before {
-      height: 400px;
-    }
-  }
-  @media (min-width: 1440px) {
-    &:before {
-      height: 500px;
-    }
-  }
-  @media (min-width: 1920px) {
-    &:before {
-      height: 600px;
-    }
-  }
-}
-
-.index-content__title {
-  position: relative;
-  top: -60px;
 }
 
 .collage {
   overflow: hidden;
+  margin-bottom: 51px;
+  @media (min-width: 992px) {
+    overflow: visible;
+    position: relative;
+    margin-bottom: 125px;
+  }
 }
 
 .collage__img_xs {
@@ -327,27 +267,36 @@ a {
   position: relative;
   left: -19%;
   @media (min-width: 768px) {
-    & {
-      position: static;
-      width: 71%;
-      margin: 0 auto;
-    }
+    position: static;
+    width: 71%;
+    margin: 0 auto;
   }
   @media (min-width: 992px) {
-    & {
-      display: none;
-    }
+    display: none;
   }
 }
 
 .collage__img_lg {
   display: none;
   @media (min-width: 992px) {
-    & {
-      display: block;
-      width: 60%;
-      position: relative;
-      right: -40px;
-    }
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -45px;
+  }
+  @media (min-width: 1200px) {
+    top: -55px;
+  }
+  @media (min-width: 1920px) {
+    display: none;
+  }
+}
+.collage__img_lg2 {
+  display: none;
+  @media (min-width: 1920px) {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -90px;
   }
 }
